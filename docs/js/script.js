@@ -1,4 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Bot公式サイトへようこそ');
+    console.log('ページが読み込まれました');
 });
-
