@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const greetButton = document.getElementById('greetButton');
     greetButton.addEventListener('click', () => {
-        alert('こんにちは！Botの公式サイトへようこそ！');
+        alert('こんにちは！coresyncの公式サイトへようこそ！');
     });
 });
