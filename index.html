@@ -137,14 +137,12 @@
 
 <!-- 不正利用報告フォーム -->
 <div class="form-container" id="report-form">
- 
-  
+ <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelyUtcNrL61YSo0YFLxehU5NbDE-vTa-WAUIaNgerUE7pi-w/viewform?embedded=true" width="640" height="710" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 </div>
 
 <!-- 質問フォーム -->
 <div class="form-container" id="question-form">
-  <h2>質問する</h2>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelyUtcNrL61YSo0YFLxehU5NbDE-vTa-WAUIaNgerUE7pi-w/viewform?embedded=true" width="640" height="710" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnmFmp3sAdlfs-s_25K80AzDxoPL_GYCKTMX80d_-pfE0fbw/viewform?embedded=true" width="640" height="667" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 </div>
 
 <!-- よくあるご質問 -->
@@ -160,39 +158,6 @@
   </div>
 </div>
 
-<script>
-  // フォームの検証
-  function validateReportForm() {
-    alert('不正利用の報告が送信されました。ありがとうございます。');
-    return true;
-  }
-  function validateQuestionForm() {
-    alert('質問が送信されました。ありがとうございます。');
-    return true;
-  }
-
-  // フォーム表示切り替え
-  document.getElementById('report-link').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('report-form').style.display = 'block';
-    document.getElementById('question-form').style.display = 'none';
-    document.getElementById('faq-content').style.display = 'none';
-  });
-
-  document.getElementById('question-link').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('question-form').style.display = 'block';
-    document.getElementById('report-form').style.display = 'none';
-    document.getElementById('faq-content').style.display = 'none';
-  });
-
-  document.getElementById('faq-link').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('faq-content').style.display = 'block';
-    document.getElementById('report-form').style.display = 'none';
-    document.getElementById('question-form').style.display = 'none';
-  });
-</script>
 
 <!-- フォーム送信後の隠しiframe -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
