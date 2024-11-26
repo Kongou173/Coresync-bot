@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>coresync Bot 公式サイト</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* 背景を白に設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    color: black; /* 文字の色を黒に設定 */
+  }
+  .header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    gap: 10px;
+  }
+  .header a, .header button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .header a:hover, .header button:hover {
+    background-color: #555;
+  }
+  .form-container {
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    color: #333;
+  }
+  .form-container h2 {
+    text-align: center;
+  }
+  .form-container input[type="text"],
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .form-container button:hover {
+    background-color: #555;
+  }
+
+  .greeting-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .greeting {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .sub-greeting {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <button id="report-link">不正利用を報告する</button>
+  <button id="question-link">質問する</button>
+  <button id="faq-link">よくあるご質問</button>
+  <a href="https://yuuseibe.github.io/endula/eula.html#">discord bot利用規約</a>
+  <a href="https://discord.gg/jmCg78uGp4">サポートサーバーに参加</a>
+  <a href="https://discord.com/oauth2/authorize?client_id=1307237337524342825">botを導入する</a>
+</header>
+
+<div class="greeting-container">
+  <div class="greeting">こんにちは</div>
+  <div class="sub-greeting">この度は、coresync botを導入していただきありがとうございます</div>
+  <div class="sub-greeting">御用がありますか？</div>
+</div>
+
+<!-- 不正利用報告フォーム -->
+<div class="form-container" id="report-form">
+  <h2>不正利用を報告&フィードバックを送信する</h2>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfx7kGhHkXUZoFSO4OslsQgV2I1H3lL7ex3LNiY_UUgoHFxOw/formResponse" method="POST" target="hidden_iframe" onsubmit="return validateReportForm()">
+    <input type="text" name="entry.123456789" placeholder="お名前" required>
+    <textarea name="entry.987654321" placeholder="不正利用の詳細&フィードバック" rows="5" required></textarea>
+    <button type="submit">送信</button>
+  </form>
+</div>
+
+<!-- 質問フォーム -->
+<div class="form-container" id="question-form">
+  <h2>質問する</h2>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelyUtcNrL61YSo0YFLxehU5NbDE-vTa-WAUIaNgerUE7pi-w/viewform?embedded=true" width="640" height="710" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+</div>
+
+<!-- よくあるご質問 -->
+<div class="faq-container" id="faq-content">
+  <h2>よくあるご質問</h2>
+  <div>
+    <h4>Q: このサイトの利用には料金がかかりますか？</h4>
+    <p>A: いいえ、このサイトの利用は無料です。</p>
+    <h4>Q: 通報した内容はどのように処理されますか？</h4>
+    <p>A: 通報内容は管理者によって確認され、適切な対応が取られます。</p>
+    <h4>Q: 質問した内容について返信を受け取ることはできますか？</h4>
+    <p>A: はい、質問内容に関する回答はdiscordサーバを通じて返信が行われます</p>
+  </div>
+</div>
+
+<script>
+  // フォームの検証
+  function validateReportForm() {
+    alert('不正利用の報告が送信されました。ありがとうございます。');
+    return true;
+  }
+  function validateQuestionForm() {
+    alert('質問が送信されました。ありがとうございます。');
+    return true;
+  }
+
+  // フォーム表示切り替え
+  document.getElementById('report-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('report-form').style.display = 'block';
+    document.getElementById('question-form').style.display = 'none';
+    document.getElementById('faq-content').style.display = 'none';
+  });
+
+  document.getElementById('question-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('question-form').style.display = 'block';
+    document.getElementById('report-form').style.display = 'none';
+    document.getElementById('faq-content').style.display = 'none';
+  });
+
+  document.getElementById('faq-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('faq-content').style.display = 'block';
+    document.getElementById('report-form').style.display = 'none';
+    document.getElementById('question-form').style.display = 'none';
+  });
+</script>
+
+<!-- フォーム送信後の隠しiframe -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<footer class="footer">
+  <div>
+    <a href="https://yuuseibe.github.io/endula/eula.html#">利用規約</a>
+    <a href="https://discord.com/oauth2/authorize?client_id=1307237337524342825">Botを導入する</a>
+  </div>
+    <div>&copy; 2024 coresync Bot公式サイト</div>
+</footer>
+
+</body>
+</html>
