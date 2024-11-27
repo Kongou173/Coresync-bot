@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コマンド一覧</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    nav {
+      background-color: #007BFF;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+    .content {
+      text-align: left;
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .content h2 {
+      font-size: 1.8rem;
+    }
+    .content p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    code {
+      background-color: #f1f1f1;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="tos.html">利用規約</a>
+    <a href="faq.html">コマンド一覧</a>
+    <a href="report.html">不正利用を通報する</a>
+    <a href="contact.html">質問する</a>
+    <a href="https://discord.gg/r594PHeNNp" target="_blank">Discordサーバーに参加</a>
+    <a href="https://discord.com/oauth2/authorize?client_id=1307237337524342825" target="_blank">Botを導入する</a>
+  </nav>
+
+  <h1>コマンド一覧</h1>
+  
+  <div class="content">
+    <h2>利用可能なコマンド</h2>
+    <ul>
+      <li><code>/help</code> - 利用可能なコマンド一覧を表示します</li>
+      <li><code>/ban &lt;user&gt;</code> - ユーザーをBANします</li>
+      <li><code>/kick &lt;user&gt;</code> - ユーザーをキックします</li>
+      <li><code>/timeout &lt;user&gt; &lt;duration&gt;</code> - 指定された時間だけユーザーをタイムアウトします (1分〜1時間)</li>
+      <li><code>/support</code> - サポートサーバーのリンクを表示します</li>
+      <li><code>/say &lt;message&gt;</code> - Botが指定メッセージを代わりに話します</li>
+      <li><code>/time</code> - 現在の時刻を表示します</li>
+      <li><code>/chat &lt;message&gt;</code> - Gemini APIとチャット</li>
+      <li><code>/chat_clear</code> - チャット履歴を削除します</li>
+      <li><code>/random</code> - ユーザー名をランダムに変更します</li>
+      <li><code>/wiki</code> - Wikipediaから情報を取得します</li>
+      <li><code>/server</code> - サーバー情報を取得します</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>© 2024 coresync bot. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
